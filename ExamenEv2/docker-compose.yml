@@ -13,8 +13,7 @@ services:
       - USER_PASSWORD=password #optional
     ports:
       - 2222:2222
-    volumes:
-      - /home/${USER}/GIT/examenPSP/ssh:/home
+    
     restart: unless-stopped
     
   ftp-server:
@@ -30,8 +29,7 @@ services:
       - 20:20
       - 21:21
       - 21100-21110:21100-21110
-    volumes:
-      - /home/${USER}/GIT/examenPSP/ftp:/home/vsftpd
+    
     restart: unless-stopped
 
   fake-smtp-server:
